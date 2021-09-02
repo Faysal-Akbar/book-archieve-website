@@ -9,7 +9,7 @@ const searchButton = () => {
     const url = `https://openlibrary.org/search.json?q=${searchText}`
     fetch(url)
     .then(response => response.json())
-    .then(data => displayBooks(data.docs))
+    .then(data => displayBooks(data.docs.slice(0, 36)))
 }
 
 const displayBooks = books => {
@@ -43,4 +43,3 @@ const displayBooks = books => {
         bookContainer.appendChild(div);
     })
 }
-
