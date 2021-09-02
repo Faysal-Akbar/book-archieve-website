@@ -1,7 +1,6 @@
 const searchButton = () => {
     const searchField = document.getElementById('search-field');
-    const searchText = searchField.value;
-
+    const searchText = searchField.value;  
     searchField.value = '';
      
     /*-----------------------
